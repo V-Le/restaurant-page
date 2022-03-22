@@ -110,13 +110,23 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/contact.js":
+/*!************************!*\
+  !*** ./src/contact.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadContact)\n/* harmony export */ });\nfunction loadContact() {\r\n    const pageElement = document.querySelector('.Page-Content');\r\n    pageElement.innerHTML = '';\r\n    \r\n    const firstContact = document.createElement('div');\r\n    firstContact.setAttribute('style', 'width: 100%; height: 100px; background-color: blue;');\r\n    pageElement.appendChild(firstContact);\r\n}\r\n\n\n//# sourceURL=webpack://restaurant-page/./src/contact.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu.js */ \"./src/menu.js\");\n\r\n\r\n\r\nconst mainContainer = document.querySelector('#main-container');\r\nmainContainer.setAttribute('style', 'width: 100vw; height: 100vh; display: flex; flex-direction: column;');\r\n\r\n/*******************************/\r\n/* Creating the navagation Bar */\r\n/*******************************/\r\nconst navBar = document.createElement('div');\r\nnavBar.classList.add('Navigation-Bar');\r\nnavBar.setAttribute('style', ' display: flex; justify-content: center; align-items: center; width: 100%; height: 50px; background-color: #888;');\r\nmainContainer.appendChild(navBar);\r\n\r\nconst homeBtn = document.createElement('button');\r\nhomeBtn.innerText = 'Home';\r\nhomeBtn.setAttribute('style', \"width: 100px; height 50px; margin: 0 5px\");\r\nnavBar.appendChild(homeBtn);\r\n\r\nconst menuBtn = document.createElement('button');\r\nmenuBtn.innerText = 'Menu';\r\nmenuBtn.setAttribute('style', \"width: 100px; height 50px; margin: 0 5px\");\r\nmenuBtn.addEventListener('click', _menu_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])\r\nnavBar.appendChild(menuBtn);\r\n\r\nconst contactBtn = document.createElement('button');\r\ncontactBtn.innerText = 'Contact';\r\ncontactBtn.setAttribute('style', \"width: 100px; height 50px; margin: 0 5px\");\r\n\r\nnavBar.appendChild(contactBtn);\r\n\r\n/*******************************/\r\n/* Creating the lower content  */\r\n/*******************************/\r\nconst pageElement = document.createElement('div');\r\npageElement.classList.add('Page-Content');\r\npageElement.setAttribute('style', 'display: flex; flex-direction: column; width: 100%; height: 100%; background-color: #777;')\r\nmainContainer.appendChild(pageElement);\r\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu.js */ \"./src/menu.js\");\n/* harmony import */ var _contact_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contact.js */ \"./src/contact.js\");\n\r\n\r\n\r\n\r\nconst mainContainer = document.querySelector('#main-container');\r\nmainContainer.setAttribute('style', 'width: 100vw; height: 100vh; display: flex; flex-direction: column;');\r\n\r\n/*******************************/\r\n/* Creating the navagation Bar */\r\n/*******************************/\r\nconst navBar = document.createElement('div');\r\nnavBar.classList.add('Navigation-Bar');\r\nnavBar.setAttribute('style', ' display: flex; justify-content: center; align-items: center; width: 100%; height: 50px; background-color: #888;');\r\nmainContainer.appendChild(navBar);\r\n\r\nconst homeBtn = document.createElement('button');\r\nhomeBtn.innerText = 'Home';\r\nnavBar.appendChild(homeBtn);\r\n\r\nconst menuBtn = document.createElement('button');\r\nmenuBtn.innerText = 'Menu';\r\nmenuBtn.addEventListener('click', _menu_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])\r\nnavBar.appendChild(menuBtn);\r\n\r\nconst contactBtn = document.createElement('button');\r\ncontactBtn.innerText = 'Contact';\r\ncontactBtn.addEventListener('click', _contact_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])\r\nnavBar.appendChild(contactBtn);\r\n\r\nconst allBtns = document.querySelectorAll('button');\r\nallBtns.forEach(btns => btns.setAttribute('style', \"width: 100px; height 50px; margin: 0 5px\"))\r\n\r\n/*******************************/\r\n/* Creating the lower content  */\r\n/*******************************/\r\nconst pageElement = document.createElement('div');\r\npageElement.classList.add('Page-Content');\r\npageElement.setAttribute('style', 'display: flex; flex-direction: column; width: 100%; height: 100%; background-color: #777;')\r\nmainContainer.appendChild(pageElement);\r\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
 
 /***/ }),
 
@@ -126,7 +136,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ printMe)\n/* harmony export */ });\nfunction printMe() {\r\n    console.log('printMe function clicked');\r\n}\n\n//# sourceURL=webpack://restaurant-page/./src/menu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadMenu)\n/* harmony export */ });\nfunction loadMenu() {\r\n    const pageElement = document.querySelector('.Page-Content');\r\n    pageElement.innerHTML = '';\r\n\r\n    const firstItem = document.createElement('div');\r\n    firstItem.setAttribute('style', 'width: 100%; height: 100px; background-color: red;');\r\n    pageElement.appendChild(firstItem);\r\n}\n\n//# sourceURL=webpack://restaurant-page/./src/menu.js?");
 
 /***/ })
 

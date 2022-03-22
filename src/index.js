@@ -1,5 +1,6 @@
 import './style.css';
-import printMe from './menu.js';
+import loadMenu from './menu.js';
+import loadContact from './contact.js';
 
 const mainContainer = document.querySelector('#main-container');
 mainContainer.setAttribute('style', 'width: 100vw; height: 100vh; display: flex; flex-direction: column;');
@@ -14,20 +15,20 @@ mainContainer.appendChild(navBar);
 
 const homeBtn = document.createElement('button');
 homeBtn.innerText = 'Home';
-homeBtn.setAttribute('style', "width: 100px; height 50px; margin: 0 5px");
 navBar.appendChild(homeBtn);
 
 const menuBtn = document.createElement('button');
 menuBtn.innerText = 'Menu';
-menuBtn.setAttribute('style', "width: 100px; height 50px; margin: 0 5px");
-menuBtn.addEventListener('click', printMe)
+menuBtn.addEventListener('click', loadMenu)
 navBar.appendChild(menuBtn);
 
 const contactBtn = document.createElement('button');
 contactBtn.innerText = 'Contact';
-contactBtn.setAttribute('style', "width: 100px; height 50px; margin: 0 5px");
-
+contactBtn.addEventListener('click', loadContact)
 navBar.appendChild(contactBtn);
+
+const allBtns = document.querySelectorAll('button');
+allBtns.forEach(btns => btns.setAttribute('style', "width: 100px; height 50px; margin: 0 5px"))
 
 /*******************************/
 /* Creating the lower content  */
