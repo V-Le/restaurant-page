@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadContact)\n/* harmony export */ });\n/* harmony import */ var _functions_removeChildren_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions/removeChildren.js */ \"./src/functions/removeChildren.js\");\n\r\n\r\nfunction loadContact() {\r\n    const pageElement = document.querySelector('.Page-Content');\r\n    //pageElement.innerHTML = '';\r\n    (0,_functions_removeChildren_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n    \r\n    const firstContact = document.createElement('div');\r\n    firstContact.setAttribute('style', 'width: 100%; height: 100px; background-color: blue;');\r\n    pageElement.appendChild(firstContact);\r\n}\r\n\n\n//# sourceURL=webpack://restaurant-page/./src/contact.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadContact)\n/* harmony export */ });\n/* harmony import */ var _functions_removeChildren_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions/removeChildren.js */ \"./src/functions/removeChildren.js\");\n\r\n\r\nfunction loadContact() {\r\n    (0,_functions_removeChildren_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\r\n    const contentContainer = document.querySelector('.Content-Container');\r\n\r\n    const firstContact = document.createElement('div');\r\n    firstContact.setAttribute('style', 'width: 100%; height: 100px; background-color: blue;');\r\n    contentContainer.appendChild(firstContact);\r\n}\r\n\n\n//# sourceURL=webpack://restaurant-page/./src/contact.js?");
 
 /***/ }),
 
@@ -126,7 +126,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ removeChildren)\n/* harmony export */ });\nfunction removeChildren() {\r\n    const contentContainer = document.querySelector('.Content-Container');\r\n\r\n    while (contentContainer.children.length > 1) {\r\n        contentContainer.children[1].remove();        \r\n    }\r\n}\n\n//# sourceURL=webpack://restaurant-page/./src/functions/removeChildren.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ removeChildren)\n/* harmony export */ });\nfunction removeChildren() {\r\n    const contentContainer = document.querySelector('.Content-Container');\r\n\r\n    while (contentContainer.children.length > 0) {\r\n        contentContainer.children[0].remove();\r\n    }\r\n}\n\n//# sourceURL=webpack://restaurant-page/./src/functions/removeChildren.js?");
 
 /***/ }),
 
