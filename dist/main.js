@@ -126,7 +126,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu.js */ \"./src/menu.js\");\n/* harmony import */ var _contact_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contact.js */ \"./src/contact.js\");\n\r\n\r\n\r\n\r\nconst mainContainer = document.querySelector('#main-container');\r\nmainContainer.setAttribute('style', 'width: 100vw; height: 100vh; display: flex; flex-direction: column;');\r\n\r\n/*******************************/\r\n/* Creating the navagation Bar */\r\n/*******************************/\r\nconst navBar = document.createElement('div');\r\nnavBar.classList.add('Navigation-Bar');\r\nnavBar.setAttribute('style', ' display: flex; justify-content: center; align-items: center; width: 100%; height: 50px; background-color: #888;');\r\nmainContainer.appendChild(navBar);\r\n\r\nconst homeBtn = document.createElement('button');\r\nhomeBtn.innerText = 'Home';\r\nnavBar.appendChild(homeBtn);\r\n\r\nconst menuBtn = document.createElement('button');\r\nmenuBtn.innerText = 'Menu';\r\nmenuBtn.addEventListener('click', _menu_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])\r\nnavBar.appendChild(menuBtn);\r\n\r\nconst contactBtn = document.createElement('button');\r\ncontactBtn.innerText = 'Contact';\r\ncontactBtn.addEventListener('click', _contact_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])\r\nnavBar.appendChild(contactBtn);\r\n\r\nconst allBtns = document.querySelectorAll('button');\r\nallBtns.forEach(btns => btns.setAttribute('style', \"width: 100px; height 50px; margin: 0 5px\"))\r\n\r\n/*******************************/\r\n/* Creating the lower content  */\r\n/*******************************/\r\nconst pageElement = document.createElement('div');\r\npageElement.classList.add('Page-Content');\r\npageElement.setAttribute('style', 'display: flex; flex-direction: column; width: 100%; height: 100%; background-color: #777;')\r\nmainContainer.appendChild(pageElement);\r\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu.js */ \"./src/menu.js\");\n/* harmony import */ var _contact_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contact.js */ \"./src/contact.js\");\n/* harmony import */ var _Assets_logo_1_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Assets/logo_1.png */ \"./src/Assets/logo_1.png\");\n\r\n\r\n\r\n\r\n\r\nconst mainContainer = document.querySelector('#main-container');\r\nmainContainer.setAttribute('style', 'width: 100vw; height: 100vh; display: flex; flex-direction: column;');\r\n\r\n/*******************************/\r\n/* Creating the navagation Bar */\r\n/*******************************/\r\nconst navContainer = document.createElement('div');\r\nnavContainer.className = 'Navigation-Container';\r\nnavContainer.setAttribute('style', \"display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100vw; height: 151px;\")\r\nmainContainer.appendChild(navContainer)\r\n\r\nconst navLogoContainer = document.createElement('div');\r\nnavLogoContainer.className = 'Navigation-Logo-Container';\r\nnavLogoContainer.setAttribute('style', 'display: flex; justify-content: center; align-items: center; width: 100%; height: 100px; backgroundcolor: #fff');\r\nnavContainer.appendChild(navLogoContainer);\r\n\r\nconst navLogo = document.createElement('img');\r\nnavLogo.src = _Assets_logo_1_png__WEBPACK_IMPORTED_MODULE_3__;\r\nnavLogo.setAttribute('style', 'width: 180px; height: auto;')\r\nnavLogoContainer.appendChild(navLogo);\r\n\r\nconst navBarContainer = document.createElement('div');\r\nnavBarContainer.className = 'Navigation-Bar-Container';\r\nnavBarContainer.setAttribute('style', ' display: flex; justify-content: center; align-items: center; width: 100%; height: 50px; background-color: #888;');\r\nnavContainer.appendChild(navBarContainer);\r\n\r\nconst homeBtn = document.createElement('button');\r\nhomeBtn.innerText = 'Home';\r\nnavBarContainer.appendChild(homeBtn);\r\n\r\nconst menuBtn = document.createElement('button');\r\nmenuBtn.innerText = 'Menu';\r\nmenuBtn.addEventListener('click', _menu_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])\r\nnavBarContainer.appendChild(menuBtn);\r\n\r\nconst contactBtn = document.createElement('button');\r\ncontactBtn.innerText = 'Contact';\r\ncontactBtn.addEventListener('click', _contact_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])\r\nnavBarContainer.appendChild(contactBtn);\r\n\r\nconst allBtns = document.querySelectorAll('button');\r\nallBtns.forEach(btns => btns.setAttribute('style', \"width: 100px; height 50px; margin: 0 5px\"))\r\n\r\n/*******************************/\r\n/* Creating the lower content  */\r\n/*******************************/\r\nconst pageElement = document.createElement('div');\r\npageElement.className = 'Page-Content';\r\npageElement.setAttribute('style', 'display: flex; flex-direction: column; width: 100%; height: 100%; background-color: #777;')\r\nmainContainer.appendChild(pageElement);\r\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
 
 /***/ }),
 
@@ -137,6 +137,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadMenu)\n/* harmony export */ });\nfunction loadMenu() {\r\n    const pageElement = document.querySelector('.Page-Content');\r\n    pageElement.innerHTML = '';\r\n\r\n    const firstItem = document.createElement('div');\r\n    firstItem.setAttribute('style', 'width: 100%; height: 100px; background-color: red;');\r\n    pageElement.appendChild(firstItem);\r\n}\n\n//# sourceURL=webpack://restaurant-page/./src/menu.js?");
+
+/***/ }),
+
+/***/ "./src/Assets/logo_1.png":
+/*!*******************************!*\
+  !*** ./src/Assets/logo_1.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"d03796f837dac560770c.png\";\n\n//# sourceURL=webpack://restaurant-page/./src/Assets/logo_1.png?");
 
 /***/ })
 
@@ -191,6 +201,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -205,6 +227,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
