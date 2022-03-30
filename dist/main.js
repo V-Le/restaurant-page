@@ -110,16 +110,6 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
-/***/ "./src/contact.js":
-/*!************************!*\
-  !*** ./src/contact.js ***!
-  \************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadContact)\n/* harmony export */ });\n/* harmony import */ var _functions_removeChildren_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions/removeChildren.js */ \"./src/functions/removeChildren.js\");\n\r\n\r\nfunction loadContact() {\r\n    (0,_functions_removeChildren_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\r\n    const contentContainer = document.querySelector('.Content-Container');\r\n\r\n    const firstContact = document.createElement('div');\r\n    firstContact.setAttribute('style', 'width: 100%; height: 100px; background-color: blue;');\r\n    contentContainer.appendChild(firstContact);\r\n}\r\n\n\n//# sourceURL=webpack://restaurant-page/./src/contact.js?");
-
-/***/ }),
-
 /***/ "./src/functions/removeChildren.js":
 /*!*****************************************!*\
   !*** ./src/functions/removeChildren.js ***!
@@ -136,37 +126,57 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu.js */ \"./src/menu.js\");\n/* harmony import */ var _contact_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contact.js */ \"./src/contact.js\");\n/* harmony import */ var _Assets_logo_1_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Assets/logo_1.png */ \"./src/Assets/logo_1.png\");\n/* harmony import */ var _Assets_sushiPicture_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Assets/sushiPicture.jpg */ \"./src/Assets/sushiPicture.jpg\");\n\r\n//import removeChild from './functions/removeChildren.js';\r\n\r\n\r\n\r\n\r\n\r\n\r\nconst mainContainer = document.querySelector('#main-container');\r\nmainContainer.setAttribute('style', 'width: 100vw; height: 100vh; display: flex; flex-direction: column; overflow: hidden;');\r\n\r\n/*******************************/\r\n/* Creating the navagation Bar */\r\n/*******************************/\r\nconst navContainer = document.createElement('div');\r\nnavContainer.className = 'Navigation-Container';\r\nnavContainer.setAttribute('style', \"display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100vw; height: 151px; background-color: #fff\")\r\nmainContainer.appendChild(navContainer)\r\n\r\nconst navLogoContainer = document.createElement('div');\r\nnavLogoContainer.className = 'Navigation-Logo-Container';\r\nnavLogoContainer.setAttribute('style', 'display: flex; justify-content: center; align-items: center; width: 100%; height: 100px; backgroundcolor: #fff');\r\nnavContainer.appendChild(navLogoContainer);\r\n\r\nconst navLogo = document.createElement('img');\r\nnavLogo.src = _Assets_logo_1_png__WEBPACK_IMPORTED_MODULE_3__;\r\nnavLogo.setAttribute('style', 'width: 180px; height: auto;')\r\nnavLogoContainer.appendChild(navLogo);\r\n\r\nconst navBarContainer = document.createElement('div');\r\nnavBarContainer.className = 'Navigation-Bar-Container';\r\nnavBarContainer.setAttribute('style', ' display: flex; justify-content: center; align-items: center; width: 100%; height: 50px; background-color: #888;');\r\nnavContainer.appendChild(navBarContainer);\r\n\r\nconst homeBtn = document.createElement('button');\r\nhomeBtn.innerText = 'Home';\r\nnavBarContainer.appendChild(homeBtn);\r\n\r\nconst menuBtn = document.createElement('button');\r\nmenuBtn.innerText = 'Menu';\r\nmenuBtn.addEventListener('click', _menu_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])\r\nnavBarContainer.appendChild(menuBtn);\r\n\r\nconst contactBtn = document.createElement('button');\r\ncontactBtn.innerText = 'Contact';\r\ncontactBtn.addEventListener('click', _contact_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])\r\nnavBarContainer.appendChild(contactBtn);\r\n\r\nconst allBtns = document.querySelectorAll('button');\r\nallBtns.forEach(btns => btns.setAttribute('style', \"width: 100px; height 50px; margin: 0 5px\"))\r\n\r\n/*******************************/\r\n/* Creating the lower content  */\r\n/*******************************/\r\nconst contentContainer = document.createElement('div');\r\ncontentContainer.className = 'Content-Container';\r\ncontentContainer.setAttribute('style', 'display: flex; flex-direction: column; width: 100%; height: 100%;')\r\nmainContainer.appendChild(contentContainer);\r\n\r\nconst sushiPromoContainer = document.createElement('div');\r\nsushiPromoContainer.className = 'SushiPromo-Container';\r\n//sushiPromoContainer.setAttribute('style', 'background-color: #000; position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); width: 100%; height: 100%; z-index: -99; overflow: hidden');\r\nsushiPromoContainer.setAttribute('style', 'background-color: #000; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -99; overflow: hidden');\r\ncontentContainer.appendChild(sushiPromoContainer);\r\n\r\nconst sushiPromo = document.createElement('img');\r\nsushiPromo.src = _Assets_sushiPicture_jpg__WEBPACK_IMPORTED_MODULE_4__;\r\nsushiPromo.setAttribute('style', 'width: auto; height: auto; min-height: 100vh; position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%);');\r\nsushiPromoContainer.appendChild(sushiPromo);\r\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _pages_home_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages/home.js */ \"./src/pages/home.js\");\n/* harmony import */ var _pages_menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/menu.js */ \"./src/pages/menu.js\");\n/* harmony import */ var _pages_contact_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/contact.js */ \"./src/pages/contact.js\");\n/* harmony import */ var _assets_logo_1_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/logo_1.png */ \"./src/assets/logo_1.png\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nconst mainContainer = document.querySelector('#main-container');\r\nmainContainer.setAttribute('style', 'width: 100vw; height: 100vh; display: flex; flex-direction: column; overflow: hidden;');\r\n\r\n/*******************************/\r\n/* Creating the navagation Bar */\r\n/*******************************/\r\nconst navContainer = document.createElement('div');\r\nnavContainer.className = 'Navigation-Container';\r\nnavContainer.setAttribute('style', \"display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100vw; height: 151px; background-color: #fff\")\r\nmainContainer.appendChild(navContainer)\r\n\r\nconst navLogoContainer = document.createElement('div');\r\nnavLogoContainer.className = 'Navigation-Logo-Container';\r\nnavLogoContainer.setAttribute('style', 'display: flex; justify-content: center; align-items: center; width: 100%; height: 100px; backgroundcolor: #fff');\r\nnavContainer.appendChild(navLogoContainer);\r\n\r\nconst navLogo = document.createElement('img');\r\nnavLogo.src = _assets_logo_1_png__WEBPACK_IMPORTED_MODULE_4__;\r\nnavLogo.setAttribute('style', 'width: 180px; height: auto;')\r\nnavLogoContainer.appendChild(navLogo);\r\n\r\nconst navBarContainer = document.createElement('div');\r\nnavBarContainer.className = 'Navigation-Bar-Container';\r\nnavBarContainer.setAttribute('style', ' display: flex; justify-content: center; align-items: center; width: 100%; height: 50px; background-color: #888;');\r\nnavContainer.appendChild(navBarContainer);\r\n\r\n/*******************************/\r\n/*     Navagation Buttons      */\r\n/*******************************/\r\n\r\nconst homeBtn = document.createElement('button');\r\nhomeBtn.innerText = 'Home';\r\nhomeBtn.addEventListener('click', _pages_home_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\r\nnavBarContainer.appendChild(homeBtn);\r\n\r\nconst menuBtn = document.createElement('button');\r\nmenuBtn.innerText = 'Menu';\r\nmenuBtn.addEventListener('click', _pages_menu_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])\r\nnavBarContainer.appendChild(menuBtn);\r\n\r\nconst contactBtn = document.createElement('button');\r\ncontactBtn.innerText = 'Contact';\r\ncontactBtn.addEventListener('click', _pages_contact_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])\r\nnavBarContainer.appendChild(contactBtn);\r\n\r\nconst allBtns = document.querySelectorAll('button');\r\nallBtns.forEach(btns => btns.setAttribute('style', \"width: 100px; height 50px; margin: 0 5px\"))\r\n\r\n/*******************************/\r\n/* Creating the lower content  */\r\n/*******************************/\r\nconst contentContainer = document.createElement('div');\r\ncontentContainer.className = 'Content-Container';\r\ncontentContainer.setAttribute('style', 'display: flex; flex-direction: column; width: 100%; height: 100%;')\r\nmainContainer.appendChild(contentContainer);\r\n\r\n(0,_pages_home_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n\r\n\r\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/menu.js":
-/*!*********************!*\
-  !*** ./src/menu.js ***!
-  \*********************/
+/***/ "./src/pages/contact.js":
+/*!******************************!*\
+  !*** ./src/pages/contact.js ***!
+  \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadMenu)\n/* harmony export */ });\nfunction loadMenu() {\r\n    const pageElement = document.querySelector('.Page-Content');\r\n    pageElement.innerHTML = '';\r\n\r\n    const firstItem = document.createElement('div');\r\n    firstItem.setAttribute('style', 'width: 100%; height: 100px; background-color: red;');\r\n    pageElement.appendChild(firstItem);\r\n}\n\n//# sourceURL=webpack://restaurant-page/./src/menu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadContact)\n/* harmony export */ });\n/* harmony import */ var _functions_removeChildren_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions/removeChildren.js */ \"./src/functions/removeChildren.js\");\n\r\n\r\nfunction loadContact() {\r\n    (0,_functions_removeChildren_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\r\n    const contentContainer = document.querySelector('.Content-Container');\r\n\r\n    const contactContent = document.createElement('div');\r\n    contactContent.setAttribute('style', 'width: 100%; height: 100px; background-color: blue;');\r\n    contentContainer.appendChild(contactContent);\r\n}\r\n\n\n//# sourceURL=webpack://restaurant-page/./src/pages/contact.js?");
 
 /***/ }),
 
-/***/ "./src/Assets/logo_1.png":
+/***/ "./src/pages/home.js":
+/*!***************************!*\
+  !*** ./src/pages/home.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadHome)\n/* harmony export */ });\n/* harmony import */ var _functions_removeChildren_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions/removeChildren.js */ \"./src/functions/removeChildren.js\");\n/* harmony import */ var _assets_sushiPicture_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/sushiPicture.jpg */ \"./src/assets/sushiPicture.jpg\");\n\r\n\r\n\r\nfunction loadHome() {\r\n    (0,_functions_removeChildren_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\r\n    const contentContainer = document.querySelector('.Content-Container');\r\n\r\n    const sushiPromoContainer = document.createElement('div');\r\n    sushiPromoContainer.className = 'SushiPromo-Container';\r\n    //sushiPromoContainer.setAttribute('style', 'background-color: #000; position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); width: 100%; height: 100%; z-index: -99; overflow: hidden');\r\n    sushiPromoContainer.setAttribute('style', 'background-color: #000; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -99; overflow: hidden');\r\n    contentContainer.appendChild(sushiPromoContainer);\r\n\r\n    const sushiPromo = document.createElement('img');\r\n    sushiPromo.src = _assets_sushiPicture_jpg__WEBPACK_IMPORTED_MODULE_1__;\r\n    sushiPromo.setAttribute('style', 'width: auto; height: auto; min-height: 100vh; position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%);');\r\n    sushiPromoContainer.appendChild(sushiPromo);\r\n}\r\n\n\n//# sourceURL=webpack://restaurant-page/./src/pages/home.js?");
+
+/***/ }),
+
+/***/ "./src/pages/menu.js":
+/*!***************************!*\
+  !*** ./src/pages/menu.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadMenu)\n/* harmony export */ });\nfunction loadMenu() {\r\n    const pageElement = document.querySelector('.Page-Content');\r\n    pageElement.innerHTML = '';\r\n\r\n    const firstItem = document.createElement('div');\r\n    firstItem.setAttribute('style', 'width: 100%; height: 100px; background-color: red;');\r\n    pageElement.appendChild(firstItem);\r\n}\n\n//# sourceURL=webpack://restaurant-page/./src/pages/menu.js?");
+
+/***/ }),
+
+/***/ "./src/assets/logo_1.png":
 /*!*******************************!*\
-  !*** ./src/Assets/logo_1.png ***!
+  !*** ./src/assets/logo_1.png ***!
   \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"d03796f837dac560770c.png\";\n\n//# sourceURL=webpack://restaurant-page/./src/Assets/logo_1.png?");
+eval("module.exports = __webpack_require__.p + \"d03796f837dac560770c.png\";\n\n//# sourceURL=webpack://restaurant-page/./src/assets/logo_1.png?");
 
 /***/ }),
 
-/***/ "./src/Assets/sushiPicture.jpg":
+/***/ "./src/assets/sushiPicture.jpg":
 /*!*************************************!*\
-  !*** ./src/Assets/sushiPicture.jpg ***!
+  !*** ./src/assets/sushiPicture.jpg ***!
   \*************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"55d645a186f72c26084f.jpg\";\n\n//# sourceURL=webpack://restaurant-page/./src/Assets/sushiPicture.jpg?");
+eval("module.exports = __webpack_require__.p + \"55d645a186f72c26084f.jpg\";\n\n//# sourceURL=webpack://restaurant-page/./src/assets/sushiPicture.jpg?");
 
 /***/ })
 

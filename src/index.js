@@ -1,9 +1,9 @@
 import './style.css';
-//import removeChild from './functions/removeChildren.js';
-import loadMenu from './menu.js';
-import loadContact from './contact.js';
-import navLogoImg from './Assets/logo_1.png';
-import sushiPromoImg from './Assets/sushiPicture.jpg';
+import loadHome from './pages/home.js';
+import loadMenu from './pages/menu.js';
+import loadContact from './pages/contact.js';
+import navLogoImg from './assets/logo_1.png';
+
 
 
 const mainContainer = document.querySelector('#main-container');
@@ -32,8 +32,13 @@ navBarContainer.className = 'Navigation-Bar-Container';
 navBarContainer.setAttribute('style', ' display: flex; justify-content: center; align-items: center; width: 100%; height: 50px; background-color: #888;');
 navContainer.appendChild(navBarContainer);
 
+/*******************************/
+/*     Navagation Buttons      */
+/*******************************/
+
 const homeBtn = document.createElement('button');
 homeBtn.innerText = 'Home';
+homeBtn.addEventListener('click', loadHome);
 navBarContainer.appendChild(homeBtn);
 
 const menuBtn = document.createElement('button');
@@ -57,13 +62,6 @@ contentContainer.className = 'Content-Container';
 contentContainer.setAttribute('style', 'display: flex; flex-direction: column; width: 100%; height: 100%;')
 mainContainer.appendChild(contentContainer);
 
-const sushiPromoContainer = document.createElement('div');
-sushiPromoContainer.className = 'SushiPromo-Container';
-//sushiPromoContainer.setAttribute('style', 'background-color: #000; position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); width: 100%; height: 100%; z-index: -99; overflow: hidden');
-sushiPromoContainer.setAttribute('style', 'background-color: #000; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -99; overflow: hidden');
-contentContainer.appendChild(sushiPromoContainer);
+loadHome();
 
-const sushiPromo = document.createElement('img');
-sushiPromo.src = sushiPromoImg;
-sushiPromo.setAttribute('style', 'width: auto; height: auto; min-height: 100vh; position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%);');
-sushiPromoContainer.appendChild(sushiPromo);
+
