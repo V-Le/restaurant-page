@@ -12,7 +12,7 @@ const mainContainer = document.querySelector('#main-container');
 /*******************************/
 const navContainer = document.createElement('div');
 navContainer.className = 'Navigation-Container';
-mainContainer.appendChild(navContainer)
+mainContainer.appendChild(navContainer);
 
 const navLogoContainer = document.createElement('div');
 navLogoContainer.className = 'Navigation-Logo-Container';
@@ -38,12 +38,12 @@ navLinkContainer.appendChild(homeBtn);
 
 const menuBtn = document.createElement('button');
 menuBtn.innerText = 'Menu';
-menuBtn.addEventListener('click', loadMenu)
+menuBtn.addEventListener('click', loadMenu);
 navLinkContainer.appendChild(menuBtn);
 
 const contactBtn = document.createElement('button');
 contactBtn.innerText = 'Contact';
-contactBtn.addEventListener('click', loadContact)
+contactBtn.addEventListener('click', loadContact);
 navLinkContainer.appendChild(contactBtn);
 
 const allBtns = document.querySelectorAll('button');
@@ -55,7 +55,7 @@ allBtns.forEach(btns => btns.className = 'Navigation-Buttons');
 /*******************************/
 const contentContainer = document.createElement('div');
 contentContainer.className = 'Content-Container';
-contentContainer.setAttribute('style', 'display: flex; flex-direction: column; width: 100%; height: 100%;')
+contentContainer.setAttribute('style', 'display: flex; flex-direction: column; width: 100%; height: 100%;');
 mainContainer.appendChild(contentContainer);
 
 loadHome();
