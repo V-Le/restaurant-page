@@ -156,7 +156,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadMenu)\n/* harmony export */ });\nfunction loadMenu() {\r\n    const pageElement = document.querySelector('.Page-Content');\r\n    pageElement.innerHTML = '';\r\n\r\n    const firstItem = document.createElement('div');\r\n    firstItem.setAttribute('style', 'width: 100%; height: 100px; background-color: red;');\r\n    pageElement.appendChild(firstItem);\r\n}\n\n//# sourceURL=webpack://restaurant-page/./src/pages/menu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadMenu)\n/* harmony export */ });\n/* harmony import */ var _functions_removeChildren_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions/removeChildren.js */ \"./src/functions/removeChildren.js\");\n\r\n\r\nfunction loadMenu() {\r\n    (0,_functions_removeChildren_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n    \r\n    const contentContainer = document.querySelector('.Content-Container');\r\n\r\n    const menuContent = document.createElement('div');\r\n    menuContent.setAttribute('style', 'width: 100%; height: 100px; background-color: red;');\r\n    contentContainer.appendChild(menuContent);\r\n}\n\n//# sourceURL=webpack://restaurant-page/./src/pages/menu.js?");
 
 /***/ }),
 

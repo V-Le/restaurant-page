@@ -1,8 +1,11 @@
-export default function loadMenu() {
-    const pageElement = document.querySelector('.Page-Content');
-    pageElement.innerHTML = '';
+import removeChild from "../functions/removeChildren.js";
 
-    const firstItem = document.createElement('div');
-    firstItem.setAttribute('style', 'width: 100%; height: 100px; background-color: red;');
-    pageElement.appendChild(firstItem);
+export default function loadMenu() {
+    removeChild();
+    
+    const contentContainer = document.querySelector('.Content-Container');
+
+    const menuContent = document.createElement('div');
+    menuContent.setAttribute('style', 'width: 100%; height: 100px; background-color: red;');
+    contentContainer.appendChild(menuContent);
 }
