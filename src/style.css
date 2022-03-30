@@ -4,6 +4,59 @@
     font-size: 18px;
 }
 
+#main-container {
+    width: 100vw; 
+    height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
+    overflow: hidden;
+}
+
+/************************/ 
+/*    Navigation Bar    */
+/************************/ 
+.Navigation-Container {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100vw; height: 
+    151px; 
+    background-color: #fff;
+}
+
+.Navigation-Logo-Container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+    height: 100px; 
+    background-color: #fff;
+}
+
+#Navigation-Logo-Image {
+    width: 180px; 
+    height: auto;
+}
+
+.Navigation-Link-Container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+    height: 50px; 
+    background-color: #888;
+}
+
+.Navigation-Buttons {
+    width: 100px; 
+    height: 30px;
+    margin: 0 5px;
+}
+
+/************************/ 
+/*       Home Page      */
+/************************/ 
 .SushiPromo-Container {
     background-color: #000; 
     width: 100%; 
